@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación DSI Nivel Avanzado: IA, Gobernanza e Inferencia</title>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --primary-light: #334155;
+            --accent-color: #c2410c;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --border-color: #cbd5e1;
+            --success-bg: #f0fdf4;
+            --success-border: #86efac;
+            --warning-bg: #fff7ed;
+            --warning-border: #fdba74;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 1rem auto 0;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .alert {
+            background-color: var(--warning-bg);
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+            color: #9a3412;
+        }
+
+        details {
+            background-color: var(--success-bg);
+            border: 1px solid var(--success-border);
+            border-radius: 6px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        summary {
+            font-weight: 600;
+            cursor: pointer;
+            color: #166534;
+            outline: none;
+            font-size: 1.1rem;
+        }
+
+        details[open] summary {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--success-border);
+            padding-bottom: 0.5rem;
+        }
+
+        .badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .citation {
+            font-size: 0.85rem;
+            color: var(--primary-light);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Casos Complejos en DSI</h1>
+        <p>Inferencia, Gobernanza y Conocimiento Tácito en el Rediseño con IA</p>
+    </header>
+
+    <main>
+        <section id="introduccion">
+            <h2>Contexto Avanzado</h2>
+            <p>En esta segunda parte, nos alejamos de los procesos mecánicos simples. Abordaremos situaciones donde los mayores retos no son tecnológicos, sino organizativos. Aquí evaluaremos el <strong>conocimiento tácito</strong> (reglas no escritas que sostienen la empresa) [cite: 438-441], el <strong>riesgo legal</strong> [cite: 154], y el desafío de la <strong>optimización de costes en inferencia de IA</strong> [cite: 519-528].</p>
+            
+            <div class="alert">
+                <strong>Instrucción para los equipos:</strong> Aplicad el mismo método de 8 pasos de la sesión anterior, pero prestad especial atención a justificar <em>por qué</em> la IA no debe tomar decisiones autónomas en ciertos puntos y cómo segmentaréis las rutas para no colapsar el sistema.
+            </div>
+        </section>
+
+        <section id="caso1">
+            <h2><span class="badge">Caso 1</span> Generación de Propuestas Comerciales B2B</h2>
+            <p><strong>Contexto:</strong> Las solicitudes comerciales llegan por correo libre[cite: 123]. El agente interpreta la petición completando mentalmente los huecos [cite: 125, 126], busca antecedentes en carpetas dispersas[cite: 132], y redacta una propuesta desde cero. Finalmente, la Dirección revisa y aprueba el 100% de las propuestas "por seguridad", convirtiéndose en un cuello de botella[cite: 143, 144].</p>
+            
+            <details>
+                <summary>💡 Ver Solución Orientativa: El Rediseño de la Información</summary>
+                <p><strong>Fricciones:</strong> La entrada libre introduce ambigüedad desde el primer momento[cite: 124, 125]. El conocimiento está disperso y la aprobación total es una ilusión de seguridad[cite: 133, 144].</p>
+                <p><strong>Rediseño (TO-BE):</strong>
+                <ul>
+                    <li><strong>Entrada:</strong> Convertir el correo en un formulario estructurado para eliminar la ambigüedad[cite: 128].</li>
+                    <li><strong>Procesamiento:</strong> Centralizar antecedentes y usar IA para resumirlos, reduciendo la carga cognitiva[cite: 134, 135].</li>
+                    <li><strong>Generación:</strong> La IA genera un primer borrador a partir de plantillas, pero el humano lo revisa (la IA asiste, no decide) [cite: 138-142].</li>
+                    <li><strong>Reglas de negocio (Aprobación):</strong> Establecer umbrales. Las propuestas estándar se aprueban automáticamente o por un mando intermedio; solo aquellas con alto descuento o cláusulas no estándar van a Dirección[cite: 145, 146].</li>
+                </ul>
+                </p>
+            </details>
+        </section>
+
+        <section id="caso2">
+            <h2><span class="badge">Caso 2</span> Revisión Contractual y Riesgo Legal</h2>
+            <p><strong>Contexto:</strong> El equipo legal revisa contratos de proveedores. El proceso formal dice que se sigue un checklist estricto[cite: 424]. Sin embargo, el proceso <em>real</em> está lleno de excepciones basadas en "quién es el proveedor" (conocimiento tácito)[cite: 425, 439]. La dirección quiere que una IA apruebe contratos para ir más rápido.</p>
+            
+            <details>
+                <summary>💡 Ver Solución Orientativa: El Límite de la IA</summary>
+                <p><strong>Fricciones:</strong> Desconexión severa entre el proceso formal y el real[cite: 430]. Riesgo legal altísimo si se automatiza el conocimiento tácito sin formalizar[cite: 441, 443].</p>
+                <p><strong>Rediseño (TO-BE) y Gobernanza:</strong> La IA <strong>no</strong> debe aprobar contratos autónomamente. En procesos con riesgo legal, el juicio humano es necesario para interpretar matices, asumir responsabilidad y justificar decisiones[cite: 153, 154]. 
+                <br><em>Uso de IA:</em> Extraer entidades clave y señalar desviaciones respecto a las cláusulas estándar. 
+                <br><em>Control Humano:</em> Revisión de dichas desviaciones y firma final[cite: 156, 157].</p>
+            </details>
+        </section>
+
+        <section id="caso3">
+            <h2><span class="badge">Caso 3</span> Onboarding y Dependencias entre Áreas</h2>
+            <p><strong>Contexto:</strong> Tras firmar el contrato, Ventas pasa el cliente a Operaciones para el onboarding. Operaciones se queja constantemente de que Ventas entrega expedientes incompletos. El cliente sufre retrasos y mala experiencia[cite: 255, 256].</p>
+            
+            <details>
+                <summary>💡 Ver Solución Orientativa: Arquitectura de Procesos</summary>
+                <p><strong>Fricciones:</strong> Problema clásico de fronteras interdepartamentales. El problema de soporte postventa o de onboarding a menudo nace de una mala calidad de entrada desde el proceso anterior (Ventas)[cite: 332, 416, 417].</p>
+                <p><strong>Rediseño (TO-BE):</strong>
+                <ul>
+                    <li>No se trata de acelerar Operaciones, sino de controlar la salida de Ventas.</li>
+                    <li>Implementar una validación automática (hard-stop) en el CRM: el sistema no permite avanzar el estado a "Ganado" si faltan campos críticos.</li>
+                    <li>El "Dueño del Proceso" debe ser transversal (ej. un rol de Customer Success) que supervise de principio a fin, evitando que cada departamento optimice solo lo suyo [cite: 302-308].</li>
+                </ul></p>
+            </details>
+        </section>
+
+        <section id="caso4">
+            <h2><span class="badge">Caso 4</span> Optimización de Costes en Inferencia de IA</h2>
+            <p><strong>Contexto:</strong> Se ha implantado un chatbot interno basado en un modelo LLM de última generación para consultar la documentación de la empresa[cite: 578]. Los costes se han disparado y el sistema va lento. El 70% de las consultas son peticiones triviales ("¿Dónde está el formulario X?"), pero todas consumen el mismo circuito de inferencia caro y largo[cite: 579, 594, 596].</p>
+            
+            
+
+            <details>
+                <summary>💡 Ver Solución Orientativa: Segmentación de Rutas</summary>
+                <p><strong>El problema real:</strong> El coste de inferencia aquí no es un problema puramente técnico del modelo, sino una mala asignación de recursos y un mal diseño de flujo[cite: 531, 532, 538]. Se confunde "recuperar" un dato con "generar" texto nuevo[cite: 598, 599].</p>
+                <p><strong>Rediseño (TO-BE): Segmentación de Rutas [cite: 634-639]</strong>
+                <ul>
+                    <li><strong>Ruta Rápida (Coste $0):</strong> Clasificador ligero inicial. Si es una búsqueda trivial, usa recuperación indexada clásica (búsqueda estructurada) y entrega el enlace directo sin usar el LLM[cite: 610, 611].</li>
+                    <li><strong>Ruta Compleja (Coste Inferencia):</strong> Solo si la tarea implica resumir, analizar o redactar (ej. "Resume los cambios en la política de compliance 2025"), se invoca al modelo generativo aportando el contexto exacto[cite: 612].</li>
+                    <li><strong>Métricas (KPIs):</strong> Coste por interacción, proporción de respuestas aprovechables, tiempo de respuesta según complejidad [cite: 655-659].</li>
+                </ul></p>
+            </details>
+        </section>
+
+    </main>
+</body>
+</html>
