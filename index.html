@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación DSI: Reingeniería e Identificación de Procesos</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --success-bg: #f0fdf4;
+            --success-border: #bbf7d0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 1rem auto 0;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--text-main);
+        }
+
+        .alert {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        details {
+            background-color: var(--success-bg);
+            border: 1px solid var(--success-border);
+            border-radius: 6px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        summary {
+            font-weight: 600;
+            cursor: pointer;
+            color: #166534;
+            outline: none;
+        }
+
+        summary:hover {
+            color: #14532d;
+        }
+
+        details[open] summary {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--success-border);
+            padding-bottom: 0.5rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .step-list li::before {
+            content: "➔";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Reingeniería e Identificación de Procesos con IA</h1>
+        <p>Aplicación Guiada DSI — Sesiones 9 y 10</p>
+    </header>
+
+    <main>
+        <section id="introduccion">
+            <h2>1. Propósito y Contexto</h2>
+            <p>Hablar de reingeniería de procesos en un curso de Diseño de Sistemas de Información no es un añadido lateral[cite: 4]. Un sistema de información no vive aislado; su valor aparece cuando modifica una manera concreta de producir resultados[cite: 5, 7].</p>
+            
+            <div class="alert">
+                <strong>Objetivos de la Práctica:</strong> Al finalizar esta sesión, el alumnado aprenderá a:
+                <ul class="step-list" style="margin-top: 10px;">
+                    <li>Reconocer qué es y qué no es un proceso empresarial[cite: 13].</li>
+                    <li>Delimitar correctamente su inicio y final operativo[cite: 91].</li>
+                    <li>Clasificar procesos en estratégicos, operativos o de soporte[cite: 268].</li>
+                    <li>Diagnosticar un proceso AS-IS, detectando fricciones reales[cite: 96, 104].</li>
+                    <li>Rediseñarlo (TO-BE), decidiendo dónde la Inteligencia Artificial aporta valor y dónde requiere control humano[cite: 65, 114].</li>
+                    <li>Definir métricas que evalúen el éxito del rediseño[cite: 174].</li>
+                </ul>
+            </div>
+            <p><strong>Modalidad:</strong> Trabajo en equipos de 3–5 estudiantes. <br>
+            <strong>Duración sugerida:</strong> 120 - 180 minutos.</p>
+        </section>
+
+        <section id="metodologia">
+            <h2>2. El Método Único (8 Pasos)</h2>
+            <p>Este es el camino fijo que aplicaréis en todos los casos. La repetición del método es importante porque ayuda a consolidar criterio.</p>
+            
+            <ul class="step-list">
+                <li><strong>Paso 1. Nombrar el proceso correctamente:</strong> No se acepta un nombre vago como "gestión"[cite: 17]. Debe nombrarse como un recorrido concreto (Ej: <em>Gestión de devoluciones de pedidos</em>).</li>
+                <li><strong>Paso 2. Delimitar la frontera:</strong> Responded siempre: ¿Qué evento lo inicia? ¿Qué resultado marca su final? ¿Qué casos entran y cuáles quedan fuera?[cite: 89, 90].</li>
+                <li><strong>Paso 3. Clasificar:</strong> Determinar si es estratégico, operativo o de soporte[cite: 268].</li>
+                <li><strong>Paso 4. Construir el SIPOC:</strong> Proveedor, Entrada, Proceso, Salida, Cliente. Obliga a pensar el proceso como una estructura relacional[cite: 327, 339].</li>
+                <li><strong>Paso 5. Dibujar el AS-IS:</strong> Mostrad cómo funciona *hoy*, en la práctica real (con sus atajos y errores), no el procedimiento ideal[cite: 97, 98].</li>
+                <li><strong>Paso 6. Detectar fricciones:</strong> Buscad esperas, tareas repetitivas, mala calidad de entrada o decisiones inconsistentes[cite: 104].</li>
+                <li><strong>Paso 7. Rediseñar el TO-BE:</strong> Decidid para cada actividad si se debe eliminar, simplificar, automatizar, asistir con IA o mantener bajo control humano[cite: 109, 110, 113, 114].</li>
+                <li><strong>Paso 8. Métricas y Gobernanza:</strong> Estableced cómo medir si la decisión de diseño produjo el efecto esperado (tiempo, coste, calidad, riesgos)[cite: 181].</li>
+            </ul>
+        </section>
+
+        <section id="caso1">
+            <h2><span class="badge">Ejemplo 1</span> Gestión de citas médicas en una clínica</h2>
+            <p>Este primer ejemplo sirve para que entendáis bien la lógica de delimitación y rediseño sin demasiada complejidad técnica.</p>
+            
+            <h3>Contexto y Datos Iniciales</h3>
+            <p>Una clínica privada recibe solicitudes de cita por teléfono, WhatsApp y recepción presencial. Los pacientes se quejan porque hay errores de agenda, citas duplicadas y tiempos de espera largos.</p>
+            <table>
+                <tr><th>Elemento</th><th>Situación Actual</th></tr>
+                <tr><td>Canales de entrada</td><td>Teléfono, WhatsApp, recepción física</td></tr>
+                <tr><td>Agenda</td><td>Una hoja compartida y mensajes manuales</td></tr>
+                <tr><td>Tiempo medio asignación</td><td>12 minutos</td></tr>
+                <tr><td>Error cita duplicada</td><td>8%</td></tr>
+                <tr><td>Confirmación al paciente</td><td>A veces sí, a veces no</td></tr>
+            </table>
+
+            <details>
+                <summary>💡 Ver Solución Orientativa (Desplegar tras el debate)</summary>
+                <p><strong>Frontera:</strong> <em>Inicio:</em> Paciente solicita cita. <em>Fin:</em> Recibe confirmación correcta. <br>
+                <strong>Clasificación:</strong> Operativo[cite: 273, 274].</p>
+                <p><strong>Diagnóstico AS-IS:</strong> Múltiples canales sin integración, agenda no unificada, errores manuales por falta de validación[cite: 104].</p>
+                <p><strong>Rediseño TO-BE:</strong> 
+                1. Solicitud entra por formulario o chatbot.<br>
+                2. Sistema verifica especialidad y disponibilidad centralizada.<br>
+                3. Paciente elige franja.<br>
+                4. Sistema confirma automáticamente.</p>
+                <p><strong>Rol de la IA/SI:</strong> Este proceso debe rediseñarse sobre todo por falta de integración de información. La IA aquí no es el centro; el núcleo es una buena agenda centralizada y reglas claras. La IA solo ayuda en clasificación inicial (chatbot)[cite: 66, 68].</p>
+            </details>
+        </section>
+
+        <section id="caso2">
+            <h2><span class="badge">Ejemplo 2</span> Gestión de devoluciones en comercio electrónico</h2>
+            <p>Este ejemplo sube un nivel porque introduce decisiones, validación de políticas y relación con varias áreas[cite: 20].</p>
+            
+            <h3>Contexto y Datos Iniciales</h3>
+            <p>Una tienda online recibe muchas devoluciones (450 al mes). El proceso tarda demasiado (6 días), los reembolsos se retrasan un 22% y el estado del caso es poco visible.</p>
+            
+            <details>
+                <summary>💡 Ver Solución Orientativa</summary>
+                <p><strong>Frontera:</strong> <em>Inicio:</em> Cliente solicita devolución. <em>Fin:</em> Se confirma reembolso o cambio[cite: 91].</p>
+                <p><strong>Fricciones detectadas:</strong> Entradas incompletas [cite: 332], comprobaciones repetidas, poca visibilidad del estado[cite: 104].</p>
+                <p><strong>Rediseño y Reglas de Negocio:</strong> El gran avance aquí es separar casos estándar de excepcionales[cite: 120]. 
+                Un formulario único valida el pedido. Un motor de reglas decide si es caso estándar (reembolso automático). Se requiere <strong>control humano</strong> para posibles fraudes, productos de alto valor o devoluciones fuera de plazo[cite: 156, 157].</p>
+            </details>
+        </section>
+
+        <section id="caso3">
+            <h2><span class="badge">Ejemplo 3</span> Evaluación de solicitudes de beca</h2>
+            <p>Este ejemplo incorpora un mayor peso de reglas, documentación y riesgo de sesgo o error.</p>
+            
+            <h3>Contexto y Datos Iniciales</h3>
+            <p>Una universidad recibe 900 solicitudes por convocatoria. El tiempo medio de revisión es de 18 días. Un 31% de los expedientes llega incompleto, exigiendo correcciones posteriores. Hay quejas por la comunicación opaca.</p>
+
+            <details>
+                <summary>💡 Ver Solución Orientativa</summary>
+                <p><strong>Fricciones detectadas:</strong> Gran volumen de expedientes incompletos, revisión manual lenta, riesgo de inconsistencia entre evaluadores[cite: 104].</p>
+                <p><strong>Límites de la IA (Decisión de diseño):</strong> Este ejemplo enseña la diferencia entre automatizar una comprobación y automatizar una decisión[cite: 83]. La IA <strong>no</strong> decide sola la concesión final en casos sensibles[cite: 60]. Puede verificar consistencia documental o resumir el expediente, pero la decisión final debe ser humana para garantizar la justicia procedimental[cite: 153, 154].</p>
+            </details>
+        </section>
+
+        <section id="caso4">
+            <h2><span class="badge">Ejemplo 4</span> Gestión de tickets de soporte TI (Caso Integrador)</h2>
+            <p>En este caso aplicaremos el concepto de <strong>optimización de costos en inferencia</strong>. No basta con poner IA en soporte; hay que diseñar una arquitectura de decisión sostenible[cite: 521].</p>
+            
+            <h3>Contexto y Datos Iniciales</h3>
+            <p>Se gestionan 1,200 tickets internos al mes. El equipo está saturado (14 horas de primera respuesta). El 52% son incidencias simples, pero consumen el mismo tratamiento (y coste de inferencia) que los problemas técnicos graves[cite: 538].</p>
+
+            <details>
+                <summary>💡 Ver Solución Orientativa (Rediseño y Segmentación)</summary>
+                <p><strong>Segmentación de Rutas:</strong> Muchas organizaciones diseñan servicios de IA como si existiera un único recorrido válido. Segmentar rutas significa aceptar que distintos tipos de petición merecen tratamientos diferentes[cite: 635, 637].</p>
+                <p><strong>El Diseño TO-BE:</strong>
+                <ul style="margin-top:0;">
+                    <li><em>Capa de Filtrado ($0 coste de inferencia):</em> Portal único donde una base de conocimiento sugiere una solución basada en recuperación estructurada[cite: 600].</li>
+                    <li><em>Tickets Simples:</em> IA ligera clasifica el tipo y prioridad, agrupando tickets repetidos[cite: 611].</li>
+                    <li><em>Casos Críticos (Caídas de servidor, accesos de seguridad):</em> Escalan directamente a intervención técnica experta sin pasar por generación de respuestas de IA innecesarias[cite: 612, 638].</li>
+                </ul>
+                </p>
+                <p><strong>KPIs Sugeridos:</strong> Tiempo de primera respuesta, % tickets resueltos en nivel 0 (sin escalado), coste de inferencia por ticket clasificado[cite: 655, 656].</p>
+            </details>
+        </section>
+
+    </main>
+
+</body>
+</html>
